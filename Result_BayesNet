@@ -1,0 +1,66 @@
+=== Run information ===
+
+Scheme:weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     car-evaluation
+Instances:    1728
+Attributes:   7
+              buying
+              maint
+              doors
+              persons
+              lug_boot
+              safety
+              class
+Test mode:split 90.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=7 #classindex=6
+Network structure (nodes followed by parents)
+buying(4): class 
+maint(4): class 
+doors(4): class 
+persons(3): class 
+lug_boot(3): class 
+safety(3): class 
+class(4): 
+LogScore Bayes: -13675.141425664404
+LogScore BDeu: -13816.988494397447
+LogScore MDL: -13827.682612789564
+LogScore ENTROPY: -13592.858934384594
+LogScore AIC: -13655.858934384594
+
+
+Time taken to build model: 0.02 seconds
+
+=== Evaluation on test split ===
+=== Summary ===
+
+Correctly Classified Instances         146               84.3931 %
+Incorrectly Classified Instances        27               15.6069 %
+Kappa statistic                          0.6559
+Mean absolute error                      0.1195
+Root mean squared error                  0.2333
+Relative absolute error                 50.813  %
+Root relative squared error             67.0163 %
+Total Number of Instances              173     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.957     0.241      0.887     0.957     0.921      0.976    unacc
+                 0.667     0.088      0.744     0.667     0.703      0.96     acc
+                 0.143     0.012      0.333     0.143     0.2        0.985    good
+                 1         0          1         1         1          1        vgood
+Weighted Avg.    0.844     0.185      0.827     0.844     0.832      0.972
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+ 110   5   0   0 |   a = unacc
+  14  32   2   0 |   b = acc
+   0   6   1   0 |   c = good
+   0   0   0   3 |   d = vgood
+

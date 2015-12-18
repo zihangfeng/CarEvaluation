@@ -1,0 +1,187 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.BFTree -S 1 -M 2 -N 5 -C 1.0 -P POSTPRUNED
+Relation:     car-evaluation
+Instances:    1728
+Attributes:   7
+              buying
+              maint
+              doors
+              persons
+              lug_boot
+              safety
+              class
+Test mode:split 90.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Best-First Decision Tree
+
+persons=(more)|(4)
+|  safety=(high)|(med)
+|  |  buying=(low)|(med)
+|  |  |  maint=(low)|(med)
+|  |  |  |  safety=(high)|(low)
+|  |  |  |  |  lug_boot=(big)|(med)
+|  |  |  |  |  |  doors=(5more)|(4): vgood(32.0/0.0)
+|  |  |  |  |  |  doors!=(5more)|(4)
+|  |  |  |  |  |  |  lug_boot=(big)|(small): vgood(16.0/0.0)
+|  |  |  |  |  |  |  lug_boot!=(big)|(small)
+|  |  |  |  |  |  |  |  doors=(3)|(4)|(5more)
+|  |  |  |  |  |  |  |  |  persons=(more)|(2): vgood(4.0/0.0)
+|  |  |  |  |  |  |  |  |  persons!=(more)|(2)
+|  |  |  |  |  |  |  |  |  |  buying=(low)|(vhigh)|(high): good(2.0/0.0)
+|  |  |  |  |  |  |  |  |  |  buying!=(low)|(vhigh)|(high): acc(1.0/1.0)
+|  |  |  |  |  |  |  |  doors!=(3)|(4)|(5more)
+|  |  |  |  |  |  |  |  |  buying=(low)|(vhigh)|(high): good(4.0/0.0)
+|  |  |  |  |  |  |  |  |  buying!=(low)|(vhigh)|(high)
+|  |  |  |  |  |  |  |  |  |  maint=(low)|(vhigh)|(high): good(2.0/0.0)
+|  |  |  |  |  |  |  |  |  |  maint!=(low)|(vhigh)|(high): acc(2.0/0.0)
+|  |  |  |  |  lug_boot!=(big)|(med)
+|  |  |  |  |  |  buying=(low)|(vhigh)|(high)
+|  |  |  |  |  |  |  doors=(5more)|(4)|(3): good(12.0/0.0)
+|  |  |  |  |  |  |  doors!=(5more)|(4)|(3)
+|  |  |  |  |  |  |  |  persons=(more)|(2): unacc(2.0/0.0)
+|  |  |  |  |  |  |  |  persons!=(more)|(2): good(2.0/0.0)
+|  |  |  |  |  |  buying!=(low)|(vhigh)|(high)
+|  |  |  |  |  |  |  maint=(low)|(vhigh)|(high)
+|  |  |  |  |  |  |  |  doors=(5more)|(4)|(3): good(6.0/0.0)
+|  |  |  |  |  |  |  |  doors!=(5more)|(4)|(3): unacc(1.0/1.0)
+|  |  |  |  |  |  |  maint!=(low)|(vhigh)|(high)
+|  |  |  |  |  |  |  |  doors=(5more)|(4)|(3): acc(6.0/0.0)
+|  |  |  |  |  |  |  |  doors!=(5more)|(4)|(3): unacc(1.0/1.0)
+|  |  |  |  safety!=(high)|(low)
+|  |  |  |  |  lug_boot=(big)|(med)
+|  |  |  |  |  |  buying=(low)|(vhigh)|(high)
+|  |  |  |  |  |  |  doors=(5more)|(4): good(16.0/0.0)
+|  |  |  |  |  |  |  doors!=(5more)|(4)
+|  |  |  |  |  |  |  |  lug_boot=(big)|(small): good(8.0/0.0)
+|  |  |  |  |  |  |  |  lug_boot!=(big)|(small)
+|  |  |  |  |  |  |  |  |  doors=(3)|(4)|(5more)
+|  |  |  |  |  |  |  |  |  |  persons=(more)|(2): good(2.0/0.0)
+|  |  |  |  |  |  |  |  |  |  persons!=(more)|(2): acc(2.0/0.0)
+|  |  |  |  |  |  |  |  |  doors!=(3)|(4)|(5more): acc(4.0/0.0)
+|  |  |  |  |  |  buying!=(low)|(vhigh)|(high)
+|  |  |  |  |  |  |  maint=(low)|(vhigh)|(high)
+|  |  |  |  |  |  |  |  doors=(5more)|(4): good(8.0/0.0)
+|  |  |  |  |  |  |  |  doors!=(5more)|(4)
+|  |  |  |  |  |  |  |  |  lug_boot=(big)|(small): good(4.0/0.0)
+|  |  |  |  |  |  |  |  |  lug_boot!=(big)|(small)
+|  |  |  |  |  |  |  |  |  |  doors=(3)|(4)|(5more): acc(1.0/1.0)
+|  |  |  |  |  |  |  |  |  |  doors!=(3)|(4)|(5more): acc(2.0/0.0)
+|  |  |  |  |  |  |  maint!=(low)|(vhigh)|(high): acc(16.0/0.0)
+|  |  |  |  |  lug_boot!=(big)|(med)
+|  |  |  |  |  |  doors=(5more)|(4)|(3): acc(24.0/0.0)
+|  |  |  |  |  |  doors!=(5more)|(4)|(3)
+|  |  |  |  |  |  |  persons=(more)|(2): unacc(4.0/0.0)
+|  |  |  |  |  |  |  persons!=(more)|(2): acc(4.0/0.0)
+|  |  |  maint!=(low)|(med)
+|  |  |  |  lug_boot=(big)|(med)
+|  |  |  |  |  buying=(low)|(vhigh)|(high)
+|  |  |  |  |  |  maint=(high)|(med)|(low)
+|  |  |  |  |  |  |  safety=(high)|(low)
+|  |  |  |  |  |  |  |  doors=(5more)|(4): vgood(8.0/0.0)
+|  |  |  |  |  |  |  |  doors!=(5more)|(4)
+|  |  |  |  |  |  |  |  |  lug_boot=(big)|(small): vgood(4.0/0.0)
+|  |  |  |  |  |  |  |  |  lug_boot!=(big)|(small)
+|  |  |  |  |  |  |  |  |  |  doors=(3)|(4)|(5more): acc(1.0/1.0)
+|  |  |  |  |  |  |  |  |  |  doors!=(3)|(4)|(5more): acc(2.0/0.0)
+|  |  |  |  |  |  |  safety!=(high)|(low): acc(16.0/0.0)
+|  |  |  |  |  |  maint!=(high)|(med)|(low)
+|  |  |  |  |  |  |  doors=(5more)|(4): acc(16.0/0.0)
+|  |  |  |  |  |  |  doors!=(5more)|(4)
+|  |  |  |  |  |  |  |  lug_boot=(big)|(small): acc(8.0/0.0)
+|  |  |  |  |  |  |  |  lug_boot!=(big)|(small)
+|  |  |  |  |  |  |  |  |  safety=(high)|(low): acc(4.0/0.0)
+|  |  |  |  |  |  |  |  |  safety!=(high)|(low): unacc(3.0/1.0)
+|  |  |  |  |  buying!=(low)|(vhigh)|(high): acc(58.0/6.0)
+|  |  |  |  lug_boot!=(big)|(med)
+|  |  |  |  |  safety=(high)|(low)
+|  |  |  |  |  |  doors=(5more)|(4)|(3): acc(24.0/0.0)
+|  |  |  |  |  |  doors!=(5more)|(4)|(3)
+|  |  |  |  |  |  |  persons=(more)|(2): unacc(4.0/0.0)
+|  |  |  |  |  |  |  persons!=(more)|(2): acc(4.0/0.0)
+|  |  |  |  |  safety!=(high)|(low)
+|  |  |  |  |  |  buying=(low)|(vhigh)|(high)
+|  |  |  |  |  |  |  maint=(high)|(med)|(low)
+|  |  |  |  |  |  |  |  doors=(5more)|(4)|(3): acc(6.0/0.0)
+|  |  |  |  |  |  |  |  doors!=(5more)|(4)|(3): unacc(1.0/1.0)
+|  |  |  |  |  |  |  maint!=(high)|(med)|(low): unacc(8.0/0.0)
+|  |  |  |  |  |  buying!=(low)|(vhigh)|(high): unacc(16.0/0.0)
+|  |  buying!=(low)|(med)
+|  |  |  maint=(low)|(med)
+|  |  |  |  lug_boot=(big)|(med)
+|  |  |  |  |  doors=(5more)|(4): acc(64.0/0.0)
+|  |  |  |  |  doors!=(5more)|(4)
+|  |  |  |  |  |  lug_boot=(big)|(small): acc(32.0/0.0)
+|  |  |  |  |  |  lug_boot!=(big)|(small)
+|  |  |  |  |  |  |  safety=(high)|(low): acc(16.0/0.0)
+|  |  |  |  |  |  |  safety!=(high)|(low)
+|  |  |  |  |  |  |  |  doors=(3)|(4)|(5more)
+|  |  |  |  |  |  |  |  |  persons=(more)|(2): acc(4.0/0.0)
+|  |  |  |  |  |  |  |  |  persons!=(more)|(2): unacc(4.0/0.0)
+|  |  |  |  |  |  |  |  doors!=(3)|(4)|(5more): unacc(8.0/0.0)
+|  |  |  |  lug_boot!=(big)|(med)
+|  |  |  |  |  safety=(high)|(low)
+|  |  |  |  |  |  doors=(5more)|(4)|(3): acc(24.0/0.0)
+|  |  |  |  |  |  doors!=(5more)|(4)|(3)
+|  |  |  |  |  |  |  persons=(more)|(2): unacc(4.0/0.0)
+|  |  |  |  |  |  |  persons!=(more)|(2): acc(4.0/0.0)
+|  |  |  |  |  safety!=(high)|(low): unacc(32.0/0.0)
+|  |  |  maint!=(low)|(med)
+|  |  |  |  buying=(high)|(med)|(low)
+|  |  |  |  |  maint=(high)|(med)|(low)
+|  |  |  |  |  |  lug_boot=(big)|(med)
+|  |  |  |  |  |  |  doors=(5more)|(4): acc(16.0/0.0)
+|  |  |  |  |  |  |  doors!=(5more)|(4)
+|  |  |  |  |  |  |  |  lug_boot=(big)|(small): acc(8.0/0.0)
+|  |  |  |  |  |  |  |  lug_boot!=(big)|(small)
+|  |  |  |  |  |  |  |  |  safety=(high)|(low): acc(4.0/0.0)
+|  |  |  |  |  |  |  |  |  safety!=(high)|(low)
+|  |  |  |  |  |  |  |  |  |  doors=(3)|(4)|(5more): unacc(1.0/1.0)
+|  |  |  |  |  |  |  |  |  |  doors!=(3)|(4)|(5more): unacc(2.0/0.0)
+|  |  |  |  |  |  lug_boot!=(big)|(med)
+|  |  |  |  |  |  |  safety=(high)|(low)
+|  |  |  |  |  |  |  |  doors=(5more)|(4)|(3): acc(6.0/0.0)
+|  |  |  |  |  |  |  |  doors!=(5more)|(4)|(3): unacc(1.0/1.0)
+|  |  |  |  |  |  |  safety!=(high)|(low): unacc(8.0/0.0)
+|  |  |  |  |  maint!=(high)|(med)|(low): unacc(48.0/0.0)
+|  |  |  |  buying!=(high)|(med)|(low): unacc(96.0/0.0)
+|  safety!=(high)|(med): unacc(384.0/0.0)
+persons!=(more)|(4): unacc(576.0/0.0)
+
+Size of the Tree: 133
+
+Number of Leaf Nodes: 67
+
+Time taken to build model: 0.53 seconds
+
+=== Evaluation on test split ===
+=== Summary ===
+
+Correctly Classified Instances         165               95.3757 %
+Incorrectly Classified Instances         8                4.6243 %
+Kappa statistic                          0.906 
+Mean absolute error                      0.0256
+Root mean squared error                  0.1346
+Relative absolute error                 10.8648 %
+Root relative squared error             38.6673 %
+Total Number of Instances              173     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.957     0          1         0.957     0.978      0.992    unacc
+                 0.979     0.04       0.904     0.979     0.94       0.981    acc
+                 0.714     0.006      0.833     0.714     0.769      0.997    good
+                 1         0.012      0.6       1         0.75       0.993    vgood
+Weighted Avg.    0.954     0.012      0.96      0.954     0.955      0.989
+
+=== Confusion Matrix ===
+
+   a   b   c   d   <-- classified as
+ 110   4   1   0 |   a = unacc
+   0  47   0   1 |   b = acc
+   0   1   5   1 |   c = good
+   0   0   0   3 |   d = vgood
+
